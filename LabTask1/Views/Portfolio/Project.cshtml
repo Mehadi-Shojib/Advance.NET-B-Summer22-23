@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Project";
+}
+<div>
+    <a href="/Portfolio/Landing">Home</a>
+    <a href="/Portfolio/Myprofile">Profile</a>
+    <a href="/Portfolio/Education">Education</a>
+    <a href="/Portfolio/Project">Project</a>
+    <a href="/Portfolio/References">References</a>
+
+
+</div>
+<h2>Project</h2>
+
+
+
+<table class="table table-striped">
+    <tr>
+        <th>SL</th>
+        <th>Courses</th>
+        <th>Description</th>
+    </tr>
+    @{
+        int slCount = 1;
+    }
+    @foreach (var project in Model)
+    {
+        <tr>
+            <td>@(slCount++)</td>
+            <td>@project.Course</td>
+            <td>@project.Description</td>
+        </tr>
+    }
+</table>
